@@ -6,68 +6,75 @@ import java.util.Scanner;
 public class testing {
     public static void main(String[] args) {
 
-        Scanner userInput = new Scanner(System.in);
-
+        Scanner reader = new Scanner(System.in);
         System.out.println("Please, enter Your name: ");
-        String name = userInput.nextLine();
+        String name = reader.nextLine();
         System.out.println("Welcome " + name + "!, Remember to Have Fun While Learning!");
 
-
-
         Random random = new Random();
-        int question;
-        int answer;
-        int totalscore = 0;
+        int randomNum1 = random.nextInt(1, 50);
+        int randomNum2 = random.nextInt(1, 10);
+        int result = 0;
 
+        int sum = randomNum1 + randomNum2;
+        System.out.println("What is the sum of " + randomNum1 + " and " + randomNum2);
+        int userSum = reader.nextInt();
 
-        for (int i = 0; i < 5; i++) {
-            question = random.nextInt(5) + 1;
-
-
-            switch (question) {
-                case 1:
-                    System.out.println("What is 2 + 2?");
-                    answer = 4;
-                    break;
-                case 2:
-                    System.out.println("What is the square root of 25?");
-                    answer = 5;
-                    break;
-                case 3:
-                    System.out.println("How many sides does a square have?");
-                    answer = 4;
-                    break;
-                case 4:
-                    System.out.println("What is 3 * 7?");
-                    answer = 21;
-                    break;
-                case 5:
-                    System.out.println("What is 4-1?");
-                    answer = 3;
-                    break;
-                default:
-                    System.out.println("Not a valid question");
-                    return;
-            }
-
-
-            System.out.print("Your Answer: ");
-            answer = userInput.nextInt();
-
-
-            if (answer == answer) {
-                System.out.println("Correct!");
-                totalscore++;
-            } else {
-                System.out.println("Incorrect. The correct answer is: " + answer);
-            }
-
-
+        if(userSum == sum) {
+            System.out.println("Correct answer");
+            result++;
+        } else {
+            System.out.println("Wrong answer");
         }
 
-        // Display the final score
-        System.out.println("Your Final Score: " + totalscore);
+        int sub = randomNum1 - randomNum2;
+        System.out.println("What is the difference of " + randomNum1 + " and " + randomNum2);
+        int userSub = reader.nextInt();
 
-        userInput.close();
+        if(userSub == sub) {
+            System.out.println("Correct answer");
+            result++;
+        } else {
+            System.out.println("Wrong answer");
+        }
+        int mult = randomNum1 * randomNum2;
+        System.out.println("What is the sum of " + randomNum1 + " and " + randomNum2);
+        int userMult = reader.nextInt();
+
+        if(userMult == mult) {
+            System.out.println("Correct answer");
+            result++;
+        } else {
+            System.out.println("Wrong answer");
+        }
+        int div = randomNum1 / randomNum2;
+        System.out.println("What is the division of " + randomNum1 + " and " + randomNum2);
+        int userDiv = reader.nextInt();
+
+        if(userDiv == div) {
+            System.out.println("Correct answer");
+            result++;
+        } else {
+            System.out.println("Wrong answer");
+        }
+        int mod = randomNum1 % randomNum2;
+        System.out.println("What is the modulus of " + randomNum1 + " and " + randomNum2);
+        int userMod = reader.nextInt();
+
+        if(userMod == sum) {
+            System.out.println("Correct answer");
+            result++;
+        } else {
+            System.out.println("Wrong answer");
+        }
+
+
+
+
+
+        // Display the final score
+        System.out.println( name + "Your Final Score: " + result);
+//
+        reader.close();
     }
 }
