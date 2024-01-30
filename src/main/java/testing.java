@@ -16,6 +16,7 @@ public class testing {
         int randomNum2 = random.nextInt(1, 10);
         int result = 0;
 
+        //Addtion
         int sum = randomNum1 + randomNum2;
         System.out.println("What is the sum of " + randomNum1 + " and " + randomNum2);
         int userSum = reader.nextInt();
@@ -24,9 +25,11 @@ public class testing {
             System.out.println("Correct answer");
             result++;
         } else {
-            System.out.println("Wrong answer");
+            System.out.println("Wrong answer  The correct answer is " + sum);
         }
 
+
+        //Suntraction
         int sub = randomNum1 - randomNum2;
         System.out.println("What is the difference of " + randomNum1 + " and " + randomNum2);
         int userSub = reader.nextInt();
@@ -35,8 +38,12 @@ public class testing {
             System.out.println("Correct answer");
             result++;
         } else {
-            System.out.println("Wrong answer");
+            System.out.println("Wrong answer ! The correct answer is " + sub);
         }
+
+
+
+        //Multiplication
         int mult = randomNum1 * randomNum2;
         System.out.println("What is the sum of " + randomNum1 + " and " + randomNum2);
         int userMult = reader.nextInt();
@@ -45,8 +52,11 @@ public class testing {
             System.out.println("Correct answer");
             result++;
         } else {
-            System.out.println("Wrong answer");
+            System.out.println("Wrong answer! The correct answer is " + mult);
         }
+
+
+        //Division
         int div = randomNum1 / randomNum2;
         System.out.println("What is the division of " + randomNum1 + " and " + randomNum2);
         int userDiv = reader.nextInt();
@@ -55,26 +65,29 @@ public class testing {
             System.out.println("Correct answer");
             result++;
         } else {
-            System.out.println("Wrong answer");
+            System.out.println("Wrong answer! the correct answer is " + div);
         }
+
+
+        //Modulus
         int mod = randomNum1 % randomNum2;
         System.out.println("What is the modulus of " + randomNum1 + " and " + randomNum2);
         int userMod = reader.nextInt();
 
-        if(userMod == sum) {
-            System.out.println("Correct answer");
+        if(userMod == mod) {
+            System.out.println("Correct answer!");
             result++;
         } else {
-            System.out.println("Wrong answer");
+            System.out.println("Wrong answer!  The correct answer is " + mod);
         }
 
 
 
 
 
-        // Display the final score
-        System.out.println( name + "Your Final Score: " + result);
-//
+        // final score
+        System.out.println( name + "Your Final Score: is " + result + " Keep Practicing");
+
         reader.close();
     }
 }
